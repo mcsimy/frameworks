@@ -5,13 +5,13 @@ import org.testng.annotations.*;
 
 public class SubTests extends BaseTest {
 
-    @Test(dataProvider = "valuesForSubLongTest", groups = "test1")
+    @Test(dataProvider = "valuesForSubLongTest")
     public void subLongTest(long a, long b, long expected){
         long result = calculator.sub(a, b);
         Assert.assertEquals(result, expected, "sub of long result was incorrect");
     }
 
-    @Test(dataProvider = "valuesForSubDoubleTest", groups = "test1")
+    @Test(dataProvider = "valuesForSubDoubleTest")
     public void subDoubleTest(double a, double b, double expected){
         double result = calculator.sub(a, b);
         Assert.assertEquals(result, expected,"sub of double result was incorrect");

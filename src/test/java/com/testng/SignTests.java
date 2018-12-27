@@ -15,7 +15,7 @@ public class SignTests extends BaseTest {
     @DataProvider(name = "isPositiveTestValues")
     public Object[][] cosTestValues(){
         return new Object[][]{
-//                {0, Boolean.FALSE},
+                {0, Boolean.FALSE},
                 {-1, Boolean.FALSE},
                 {1, Boolean.TRUE}
         };
@@ -23,14 +23,14 @@ public class SignTests extends BaseTest {
 
     @Test(dataProvider = "isNegTestValues")
     public void isNegTest(long a, boolean expected){
-        boolean result = calculator.isPositive(a);
+        boolean result = calculator.isNegative(a);
         Assert.assertEquals(result, expected);
     }
 
     @DataProvider(name = "isNegTestValues")
     public Object[][] isNegTestValues(){
         return new Object[][]{
-//                {0, Boolean.FALSE},
+                {0, Boolean.FALSE},
                 {-1, Boolean.TRUE},
                 {1, Boolean.FALSE}
         };

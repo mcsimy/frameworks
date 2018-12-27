@@ -16,6 +16,9 @@ public class Runner {
         XmlSuite xmlSuite = new XmlSuite();
         xmlSuite.setSuiteFiles(Arrays.asList("./src/test/resources/testng.xml"));
 
+        xmlSuite.setParallel(XmlSuite.ParallelMode.METHODS);
+        xmlSuite.setThreadCount(2);
+
         List<XmlSuite> xmlSuites = new ArrayList<>();
         xmlSuites.add(xmlSuite);
 

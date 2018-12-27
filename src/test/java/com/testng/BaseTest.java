@@ -7,13 +7,13 @@ import org.testng.annotations.BeforeClass;
 public abstract class BaseTest {
     public Calculator calculator;
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void init()
     {
         calculator = new Calculator();
     }
 
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void tearDown(){
         calculator = null;
     }

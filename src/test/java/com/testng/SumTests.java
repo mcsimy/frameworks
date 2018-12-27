@@ -6,13 +6,13 @@ import org.testng.annotations.Test;
 
 public class SumTests extends BaseTest
 {
-    @Test(dataProvider = "valuesForSumLongTest", groups = "test1")
+    @Test(dataProvider = "valuesForSumLongTest")
     public void sumLongTest(long a, long b, long expected){
         long result = calculator.sum(a, b);
         Assert.assertEquals(result, expected, "sum of long result was incorrect");
     }
 
-    @Test(dataProvider = "valuesForSumDoubleTest", groups = "test1")
+    @Test(dataProvider = "valuesForSumDoubleTest")
     public void sumDoubleTest(double a, double b, double expected){
         double result = calculator.sum(a, b);
         Assert.assertEquals(result, expected,"sum of double result was incorrect");

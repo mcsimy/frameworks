@@ -3,16 +3,9 @@ package com.junit;
 import com.epam.tat.module4.Calculator;
 import org.junit.*;
 
-public abstract class BaseTest {
-    public Calculator calculator;
+public class BaseTest {
 
-    @BeforeClass
-    public void init(){
-        calculator = new Calculator();
-    }
+    Calculator calculator;
 
-    @AfterClass
-    public void deinit(){
-        calculator = null;
-    }
+
 }
