@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo Suite">
+    <listeners>
+        <listener class-name="com.testng.listeners.TestListeners"></listener>
+    </listeners>
+    <test name="test">
+        <groups>
+            <run>
+                <include name="test1"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.testng.MultTests"></class>
+            <class name="com.testng.DivTests"></class>
+        </classes>
+    </test>
+</suite>
